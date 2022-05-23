@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Демонстрация работы алгоритма</title>
+<form action="{{ url_for('index_page') }}" method=post>
+    <dl>
+        <dt>Введите/вставьте пример отзыва на русском языке: <br>
+        <dd><textarea name=text rows=5 cols=40>{{ text }}</textarea>
+        <dd><input type=submit value="Оценить">
+    </dl>
+</form>
+
+<br>Предсказание класса отзыва:<br>
+{{ prediction_message }}
